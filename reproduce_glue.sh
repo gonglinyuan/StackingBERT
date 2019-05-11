@@ -39,6 +39,8 @@ cd examples/glue
 
 bash process_glue.sh ../../data-bin/bert_corpus/bpe-code ../../data-bin/bert_corpus/dict.txt 3
 
+cd ../..
+
 mkdir -p predictions
 
 echo 'To reproduce our result, please run in 1 GPU'
