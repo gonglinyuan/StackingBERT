@@ -24,7 +24,7 @@ function run_exp {
 
     mkdir -p models/fairseq-${TASK_NAME}
     python train.py data-bin/${DATA_PATH}/${TASK_NAME} --task ${TASK_TYPE} ${SYMMETRIC_FLAG} \
-    --arch transformer_classifier_base --n-classes ${N_CLASSES} --load-bert checkpoint.pt \
+    --arch transformer_classifier_base --n-classes ${N_CLASSES} --load-bert ${BERT_PATH} \
     --optimizer adam --adam-betas '(0.9, 0.999)' --adam-eps 1e-6 --clip-norm 0.0 --weight-decay ${WEIGHT_DECAY} \
     --lr ${LR} --lr-scheduler linear --warmup-init-lr 1e-07 --warmup-updates ${WARMUP_UPDATES} --min-lr 1e-09 \
     --criterion ${TASK_CRITERION} \
