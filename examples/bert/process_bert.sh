@@ -5,7 +5,6 @@ cd epub2txt
 make
 cd ..
 
-cp -r /hdfs/msrmt/v-ligong/book_corpus .
 7z x book_corpus/data.7z.001 -obook_corpus
 rm -r book_corpus/data.7z.*
 

@@ -1,6 +1,6 @@
 # Introduction
 
-This repository is the code to reproduce the result of *Efficient Training of BERT by Progressively Stacking*.
+This repository is the code to reproduce the result of [Efficient Training of BERT by Progressively Stacking](http://proceedings.mlr.press/v97/gong19a/gong19a.pdf).
 The code is based on [Fairseq](https://github.com/pytorch/fairseq).
 
 # Requirements and Installation
@@ -43,3 +43,23 @@ bash reproduce_glue.sh
 ```
 
 This script fine-tunes the BERT trained in step 2. The script chooses the checkpoint trained for 400K steps, which is the same as the *stacking* model in our paper.
+
+# Cite
+
+```
+@InProceedings{pmlr-v97-gong19a,
+  title = 	 {Efficient Training of {BERT} by Progressively Stacking},
+  author = 	 {Gong, Linyuan and He, Di and Li, Zhuohan and Qin, Tao and Wang, Liwei and Liu, Tieyan},
+  booktitle = 	 {Proceedings of the 36th International Conference on Machine Learning},
+  pages = 	 {2337--2346},
+  year = 	 {2019},
+  editor = 	 {Chaudhuri, Kamalika and Salakhutdinov, Ruslan},
+  volume = 	 {97},
+  series = 	 {Proceedings of Machine Learning Research},
+  address = 	 {Long Beach, California, USA},
+  month = 	 {09--15 Jun},
+  publisher = 	 {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v97/gong19a/gong19a.pdf},
+  url = 	 {http://proceedings.mlr.press/v97/gong19a.html},
+}
+```
