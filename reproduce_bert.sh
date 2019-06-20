@@ -23,14 +23,14 @@ gawk '{print tolower($0);}' > corpus.valid.tok
 
 for i in 0 1 2 3
 do
-cat ocorpus.train.txt.${i} | \
+cat corpus.train.txt.${i} | \
 python segment_sentence.py | \
 ../common/mosesdecoder/scripts/tokenizer/tokenizer.perl -threads 1 -no-escape -l en | \
 gawk '{print tolower($0);}' > corpus.train.tok.${i}
 done
 
 rm corpus.train.tok ||:
-for i in 0 1 2 3; do cat old_corpus.train.tok.${i} >> corpus.train.tok; done
+for i in 0 1 2 3; do cat corpus.train.tok.${i} >> corpus.train.tok; done
 
 #../common/fastBPE/fast learnbpe 32640 corpus.train.tok > bpe-code
 ../common/subword-nmt/subword_nmt/learn_bpe.py -s 32640 < corpus.train.tok > bpe-code
