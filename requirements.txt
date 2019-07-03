@@ -1,5 +1,6 @@
 cffi
 numpy
+scipy
 torch
 tqdm
 spacy[cuda]
