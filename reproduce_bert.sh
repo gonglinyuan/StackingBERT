@@ -76,7 +76,7 @@ python train.py data-bin/bert_corpus --task bert --load-bert checkpoint_double.p
 --optimizer adam --adam-betas '(0.9, 0.999)' --adam-eps 1e-6 --clip-norm 0.0 --weight-decay 0.01 \
 --lr 0.00055 --lr-scheduler linear --warmup-updates 1 --end-lr 0.0003 --min-lr 1e-09 \
 --criterion cross_entropy_bert \
---max-tokens 14336 --update-freq 2 --max-epoch 1 --max-update 70000 --seed 2 \
+--max-tokens 14336 --update-freq 2 --max-update 70000 --seed 2 \
 --save-dir models/L6 --no-progress-bar --log-interval 100 --save-interval-updates 10000 --keep-interval-updates 5
 
 rm checkpoint_double.pt
